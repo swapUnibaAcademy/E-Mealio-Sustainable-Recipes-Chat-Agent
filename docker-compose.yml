@@ -1,0 +1,47 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:7
+    container_name: emealio-mongo
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  mongo-restore:
+    image: mongo:7
+    container_name: mongo-restore
+    depends_on:
+      mongo:
+        condition: service_healthy
+    volumes:
+      - ./mongo_dump:/dump
+      - ./restore.sh:/restore.sh
+    entrypoint: ["bash", "/restore.sh"]
+    restart: "no"
+
+  emealio-bot:
+    build: .
+    container_name: emealio-bot
+    depends_on:
+      mongo-restore:
+        condition: service_completed_successfully
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - MONGO_HOST=mongo
+      - MONGO_PORT=27017
+    volumes:
+      - .:/app
+    command: ["python", "-u", "projectRoot/TelegramBot.py"]
+    restart: unless-stopped
+
+volumes:
+  mongo_data:

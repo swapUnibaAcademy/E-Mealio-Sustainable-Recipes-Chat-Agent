@@ -3,3 +3,6 @@
 *.pyc 
 dataset/datasetScripts/.env
 projectRoot/.env
+mongo_dump/emealio_food_db/*
+*.env
+output.txt
