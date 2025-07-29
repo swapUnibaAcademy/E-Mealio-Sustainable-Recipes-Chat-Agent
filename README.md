@@ -6,6 +6,13 @@ Subsequently, **Lorenzo Blanco**, as part of his *Bachelor's Thesis in Computer 
 
 ---
 
+## 🔌 Current Status
+
+**✅ Bot Status: ONLINE**  
+The Telegram bot is currently **active and operational**. You can interact with it searching '@emealio_bot' on Telegam and typing the `/start` command.
+
+---
+
 ## How to Install
 
 > Instructions below are intended for running the project locally.  
@@ -125,6 +132,7 @@ python test.py
 - If all tests pass, the bot is ready to go.
 - If you use a different LLM, ensure it passes all tests—otherwise, the agent may not work properly.
 
+---
 
 ## 🐳 Run with Docker (Recommended)
 
@@ -162,7 +170,20 @@ ANTHROPIC_API_KEY=your_anthropic_key
 
 ---
 
-### 🚀 2. Build and Launch the Containers
+### 📥 2. Download the MongoDB Dump
+
+Download the precomputed MongoDB dump from the following link:
+
+**🔗 [Download emealio_food_db.zip](https://www.dropbox.com/scl/fi/b5srdbxnxlt5tv9chntye/emealio_food_db.zip?rlkey=rcdpc68pq5ynwudhenihs5ubd&dl=0)**
+
+Then:
+
+1. Unzip the file.
+2. Place the contents inside the `/mongo_dump` directory.
+
+---
+
+### 🚀 3. Build and Launch the Containers
 
 From the root of the project, run:
 
@@ -178,7 +199,7 @@ This will:
 
 ---
 
-### 🧪 3. Verify It’s Working
+### 🧪 4. Verify It’s Working
 
 - Open your Telegram bot and send `/start`
 - You should receive a response from the bot within a few seconds 🎉
