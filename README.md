@@ -136,7 +136,7 @@ python test.py
 
 ## 🐳 Run with Docker (Recommended)
 
-You can run E-Mealio fully containerized with Docker and Docker Compose — no manual setup required.
+Alternatively, you can run E-Mealio fully containerized with Docker and Docker Compose — no manual setup required.
 
 ### ✅ Prerequisites
 
