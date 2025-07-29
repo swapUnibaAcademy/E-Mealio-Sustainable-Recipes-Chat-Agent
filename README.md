@@ -215,20 +215,3 @@ To **completely reset** the environment (including clearing the database), run:
 ```bash
 docker-compose down -v
 ```
-
----
-
-### 🐛 Troubleshooting
-
-- **Bot not responding?** Check logs:
-  ```bash
-  docker-compose logs -f emealio-bot
-  ```
-- **Database not loaded?** Check:
-  ```bash
-  docker-compose logs mongo-restore
-  ```
-- **Need to connect via Compass?** Use:  
-  ```
-  mongodb://localhost:27018
-  ```
