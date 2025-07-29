@@ -9,7 +9,7 @@ Subsequently, **Lorenzo Blanco**, as part of his *Bachelor's Thesis in Computer 
 ## 🔌 Current Status
 
 **✅ Bot Status: ONLINE**  
-The Telegram bot is currently **active and operational**. You can interact with it searching @emealio_bot on Telegam and typing the `/start` command.
+The Telegram bot is currently **active and operational**. You can interact with it searching **@emealio_bot** on Telegam and typing the `/start` command.
 
 ---
 
