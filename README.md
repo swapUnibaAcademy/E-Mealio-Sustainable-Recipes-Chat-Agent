@@ -174,7 +174,7 @@ ANTHROPIC_API_KEY=your_anthropic_key
 
 Download the precomputed MongoDB dump from the following link:
 
-**🔗 [Download emealio_food_db.zip](https://www.dropbox.com/scl/fi/b5srdbxnxlt5tv9chntye/emealio_food_db.zip?rlkey=rcdpc68pq5ynwudhenihs5ubd&dl=0)**
+**🔗 [Download emealio_food_db.zip](https://www.dropbox.com/scl/fi/lvygo3co749v278adexvf/emealio_food_db.zip?rlkey=96ciy1dirffwah8n3i1sw1wxf&dl=0)**
 
 Then:
 
